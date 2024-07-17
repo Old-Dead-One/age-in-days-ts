@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+form {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  margin: 0.5rem;
+}
