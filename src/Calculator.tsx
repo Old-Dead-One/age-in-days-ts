@@ -43,43 +43,44 @@ const Calculator: React.FC = () => {
         setExactAge(age);
         const days = calcDaysLived(birthDateInput);
         setDaysLived(days);
-        console.log(`Exact Age: ${age.years} years, ${age.months} months, ${age.days} days`);
-        console.log(`Days Lived: ${days} days`);
     };
 
     return (
-        <>
+        <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="name">Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        placeholder="What is your name?"
-                        onChange={(event: React.ChangeEvent<HTMLInputElement>): void => setName(event.target.value)}
-                    />
-                    <label htmlFor="birthdate">Enter your birth date:</label>
-                    <input
-                        type="date"
-                        id="birthdate"
-                        value={birthDateInput}
-                        placeholder="Enter your birth date"
-                        onChange={handleBirthdateChange}
-                    />
-                    <div>
-                        <button type="submit">Calculate</button>
-                        {name && (
-                            <>
-                                <label htmlFor="salutation">{name}, you have lived for:</label>
-                                <label htmlFor="daysLived"> {daysLived} days!</label>
-                                <p>Your exact age is {exactAge.years} years, {exactAge.months} months, and {exactAge.days} days.</p>
-                            </>
-                        )}
-                    </div>
+                    <label htmlFor="name">Name:
+                        <input
+                            type="text"
+                            id="name"
+                            value={name}
+                            placeholder="John Doe"
+                            onChange={(event: React.ChangeEvent<HTMLInputElement>): void => setName(event.target.value)}
+                        />
+                    </label>
                 </div>
-            </form>
-        </>
+                <div>
+                    <label htmlFor="birthdate">Enter your birth date:
+                        <input
+                            type="date"
+                            id="birthdate"
+                            value={birthDateInput}
+                            onChange={handleBirthdateChange}
+                        />
+                    </label>
+                </div>
+
+                <button type="submit">Calculate</button>
+                {name && (
+                    <div>
+                        <label htmlFor="salutation">{name}, you have lived for:</label>
+                        <label htmlFor="daysLived"> {daysLived} days!</label>
+                        <label>Your exact age is {exactAge.years} years, {exactAge.months} months, and {exactAge.days} days.</label>
+                    </div>
+                )}
+
+            </form >
+        </div >
     );
 };
 
