@@ -8,7 +8,7 @@ This is a simple React application for calculating the number of days lived and 
 
    ```
    git clone git@github.com:Old-Dead-One/age-in-days-ts.git
-   cd calculator-app
+   cd age-in-days-ts
    ```
 
 2. **Install dependencies:**
@@ -22,8 +22,6 @@ This is a simple React application for calculating the number of days lived and 
    ```
    npm run dev
    ```
-
-   The app will be available at `http://localhost:3000`.
 
 ## Code Overview
 
