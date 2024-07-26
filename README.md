@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Calculator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application for calculating the number of days lived and exact age based on a user's birthdate. The project uses Vite for development.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the repository:**
 
-## Expanding the ESLint configuration
+   ```
+   git clone git@github.com:Old-Dead-One/age-in-days-ts.git
+   cd age-in-days-ts
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Install dependencies:**
 
-- Configure the top-level `parserOptions` property like this:
+   ```
+   npm install
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. **Run the development server:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```
+   npm run dev
+   ```
+
+## Code Overview
+
+### `Calculator` Component
+
+This component handles the input, calculation, and display logic for the app.
+
+#### State Variables
+
+- `name`: Stores the user's name.
+- `birthDateInput`: Stores the birthdate input as a string.
+- `daysLived`: Stores the calculated number of days lived.
+- `exactAge`: Stores the exact age as an object with `years`, `months`, and `days`.
+
+#### Methods
+
+- `handleBirthdateChange(e)`: Updates the birthdate input state when the user changes the date.
+- `calcExactAge(birthDateInput)`: Calculates the exact age based on the birthdate input.
+- `calcDaysLived(birthDateInput)`: Calculates the total number of days lived based on the birthdate input.
+- `handleSubmit(e)`: Handles the form submission, triggering the calculations for exact age and days lived.
+
+## Usage
+
+1. Open the application in your browser.
+2. Enter your name in the "Name" field.
+3. Select your birthdate using the date picker.
+4. Click the "Calculate" button.
+5. The application will display the number of days you have lived and your exact age in years, months, and days.

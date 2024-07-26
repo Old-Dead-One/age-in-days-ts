@@ -121,8 +121,7 @@ const Calculator: React.FC = () => {
                         <label htmlFor="salutation">{name}, you have lived for:</label>
                         <label htmlFor="daysLived"> {daysLived} days!</label>
                         <label>
-                            Your exact age is {exactAge.years} years, {exactAge.months}{" "}
-                            months, and {exactAge.days} days.
+                            Your exact age is {exactAge.years} years, {exactAge.months}{" "} months, and {exactAge.days} days.
                         </label>
                     </div>
                 )}
